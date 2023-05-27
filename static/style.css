@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap");
+
+:root {
+  --backgroundColor: #303030;
+  --secondaryColor: #424242;
+  --barColor: #212121;
+  --accentColor: #d54d20;
+  --accentColorHover: #de4c1b;
+  --mainTextColor: #fdfdfd;
+  --secondaryTextColor: #818181;
+}
+
+#topBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: var(--mainTextColor);
+  background-color: var(--backgroundColor);
+}
+
+.username {
+  color: var(--accentColor);
+  padding-right: 3px;
+  display: block;
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+
+#main {
+	background-color: var(--backgroundColor);
+	transition: opacity 0.5s;
+}
+
+#main #content {
+	padding-top: 2% !important;
+	margin-bottom: 5% !important;
+	display: flex;
+	justify-content: center;
+	height: 90%;
+}
+
+#main .container {
+  width: 100%;
+  margin-top: auto;
+}
+
+#main #topBar {
+  width: 100%;
+  height: 60px;
+  background-color: var(--barColor);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.online {
+  background-color: #5bc236;
+}
+
+.offline {
+  background-color: var(--secondaryColor);
+}
+
+#main #messages {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#main .message {
+  max-width: 60%;
+  width: auto;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  border: 2px solid rgb(145, 145, 255);
+  margin-top: 40px;
+  padding: 10px;
+  background-color: var(--secondaryColor);
+}
+
+#main .message {
+  display: inline-block;
+  clear: both;
+  float: left;
+}
+
+#main .message.right {
+  flex-direction: row-reverse;
+  background-color: var(--accentColor);
+  float: right;
+}
+
+#main .timeStamp {
+  margin-left: 5px;
+  color: var(--secondaryTextColor);
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 15px;
+  position: relative;
+  top: 20px;
+  height: 0;
+}
+
+#main .timeStamp.right {
+  text-align: right;
+}
+
+#main #input {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--barColor);
+  padding: 10px;
+}
+
+#main #input input {
+  width: 60%;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 10px;
+  color: var(--secondaryTextColor);
+}
+
+#main #input input:focus {
+  box-shadow: 0 0 2px 3px var(--accentColor);
+  outline: none;
+}
+
+#main #input button {
+  background-color: var(--accentColor);
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--mainTextColor);
+  font-size: 24px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+#main #input button:hover {
+  background-color: var(--accentColorHover);
+  transform: scale(1.05);
+}
