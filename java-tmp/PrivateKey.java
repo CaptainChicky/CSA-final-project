@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class PrivateKey extends keygen{
+public class PrivateKey extends keygen {
 
     public PrivateKey(long num1, long num2) {
         super(num1, num2);

@@ -1,4 +1,4 @@
-public class PublicKey extends keygen{
+public class PublicKey extends keygen {
 
     public PublicKey(long num1, long num2) {
         super(num1, num2);

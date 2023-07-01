@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+
 public abstract class keygen {
     private final long p;
     private final long q;
@@ -9,8 +10,7 @@ public abstract class keygen {
     // (n, e) is public key
     // (n, d) is private key with e * d = 1 mod totient
 
-
-    //Precondition: e is a number from >1 to <totient that GCD(totient, e)=1
+    // Precondition: e is a number from >1 to <totient that GCD(totient, e)=1
     public keygen(long num1, long num2) {
         p = num1;
         q = num2;
@@ -41,4 +41,3 @@ public abstract class keygen {
 
     public abstract void getKey();
 }
-

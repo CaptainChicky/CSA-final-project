@@ -40,16 +40,16 @@ p {
 }
 
 #main {
-	background-color: var(--backgroundColor);
-	transition: opacity 0.5s;
+  background-color: var(--backgroundColor);
+  transition: opacity 0.5s;
 }
 
 #main #content {
-	padding-top: 2% !important;
-	margin-bottom: 5% !important;
-	display: flex;
-	justify-content: center;
-	height: 90%;
+  padding-top: 2% !important;
+  margin-bottom: 5% !important;
+  display: flex;
+  justify-content: center;
+  height: 90%;
 }
 
 #main .container {

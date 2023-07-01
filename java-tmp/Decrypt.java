@@ -14,15 +14,18 @@ public class Decrypt {
 
         String[] original = new String[] {
                 " ", "!", ",", ".", ";", ":", "?", "'", "’", "\"", "\\", "|", "[", "]", "&", "—",
-                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
-                "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
+                "V", "W", "X", "Y", "Z",
+                "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
+                "v", "w", "x", "y", "z"
         };
         String[] cipher = new String[] {
                 " ", "!", ",", ".", ";", ":", "?", "'", "’", "\"", "\\", "|", "[", "]", "&", "—",
-                "l", "z", "y", "v", "g", "E", "h", "i", "I", "V", "r", "Q", "N", "n", "T", "j", "c", "t", "W", "s", "o", "q", "u", "D", "P", "a",
-                "x", "e", "p", "R", "O", "K", "Z", "H", "S", "A", "k", "M", "U", "w", "G", "d", "C", "L", "f", "Y", "J", "B", "b", "X", "m", "F"
+                "l", "z", "y", "v", "g", "E", "h", "i", "I", "V", "r", "Q", "N", "n", "T", "j", "c", "t", "W", "s", "o",
+                "q", "u", "D", "P", "a",
+                "x", "e", "p", "R", "O", "K", "Z", "H", "S", "A", "k", "M", "U", "w", "G", "d", "C", "L", "f", "Y", "J",
+                "B", "b", "X", "m", "F"
         };
-
 
         StringBuilder output = new StringBuilder();
 
@@ -41,5 +44,6 @@ public class Decrypt {
         Scanner sc = new Scanner(System.in);
         String test = sc.nextLine();
         System.out.println(decrypt(test));
+        sc.close();
     }
 }
