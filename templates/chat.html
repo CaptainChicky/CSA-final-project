@@ -13,8 +13,14 @@
 <body id="body">
   <div id="main">
     <div id="topBar">
-      <h4 style="padding-left: 20px">{{ username }}</h4>
-      <div class="status online" id="status"></div>
+      <div style="flex: 1; display: flex; align-items: center;">
+        <a href="/logout" class="logout-btn" style="margin-left: 20px;">Logout</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <h4>{{ username }}</h4>
+        <div class="status online" id="status"></div>
+      </div>
+      <div style="flex: 1;"></div>
     </div>
     <div id="content">
       <div class="container">

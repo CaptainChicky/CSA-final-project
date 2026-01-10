@@ -52,6 +52,7 @@ p {
 #main .container {
   width: 100%;
   margin-top: auto;
+  padding-bottom: 100px;
 }
 
 #main #topBar {
@@ -60,6 +61,7 @@ p {
   background-color: var(--barColor);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   position: fixed;
   z-index: 1;
@@ -99,7 +101,6 @@ p {
 }
 
 #main .message {
-  display: inline-block;
   clear: both;
   float: left;
 }
@@ -172,4 +173,17 @@ p {
 #main #input button:hover {
   background-color: var(--accentColorHover);
   transform: scale(1.05);
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background-color: var(--accentColor);
+  color: var(--mainTextColor);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: var(--accentColorHover);
 }

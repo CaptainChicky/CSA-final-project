@@ -21,7 +21,7 @@ socket.on('broadcast', (data) => {
   const messageElement = document.createElement('div');
   messageElement.classList.add('message', 'left');
   messageElement.innerHTML = `
-    <div class='container'>
+    <div class='message-content'>
       <p>
         <span class='username'>${data.username}</span>${data.message}
       </p>
@@ -68,7 +68,7 @@ function sendMessage() {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message', 'right');
     messageElement.innerHTML = `
-      <div class='container'>
+      <div class='message-content'>
         <p>${message}</p>
         <p class='timeStamp right'>${time}</p>
       </div>
@@ -79,7 +79,7 @@ function sendMessage() {
   }
 }
 
-// Scroll to the bottom of the messages container
+// Scroll to the bottom of the message-content container
 function scrollToBottom() {
   const lastMessage = messagesElement.lastElementChild;
   lastMessage.scrollIntoView({ behavior: 'smooth' });

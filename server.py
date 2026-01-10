@@ -15,20 +15,16 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
 
-
 class User(UserMixin):
     def __init__(self, id):
         self.id = id
 
 
 ### CHAT HANDLING ###
-
-
 @app.route('/')
 @login_required
 def chat():
     return render_template('chat.html', username=current_user.id)
-
 
 @io.on('send')
 def handle_message(json):
@@ -40,8 +36,6 @@ def handle_message(json):
 
 
 ### LOGIN/LOGOUT ###
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == 'POST':
@@ -55,17 +49,14 @@ def login():
     elif request.method == 'GET':
         return render_template('login.html')
 
-
 @app.route("/logout")
 def logout():
     logout_user()
     return "You are logged out. <a href='/login'>Login?</a>"
 
-
 @login_manager.user_loader
 def load_user(userid):
     return User(userid)
-
 
 if __name__ == '__main__':
     io.run(app, host='0.0.0.0', port=8081)
