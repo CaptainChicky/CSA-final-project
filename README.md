@@ -6,7 +6,7 @@ If the person I worked with ever sees/revisits this repo again, just know that y
 
 # Structure
 ## Main
- - `/RSA_main/` folder contains all the RSA python code. Within main is all the functions, and the keygen, decrypt, and encrypt contain the driver programs which you actually run to generate keys, or encrypt/decrypt.
+ - `/RSA_main/` folder contains all the RSA python code. Within `rsa.py` is all the functions, and the keygen, decrypt, and encrypt contain the driver programs which you actually run to generate keys, or encrypt/decrypt.
  - `server.py` contains the flask server file you run to start the LAN server, `/static/` folder is the styling and js for the `/templates/` folder html files of the chat room. Both devices must be connected via LAN (same network that has a group policy that doesn't block LAN connections aka iPhone hotspots or home wifi, and not school wifi) to be able to see packets sent by the eventlet flask server. Access the server via the hosting device's IP address on port 8081. Of course, you can port forward to access the chatroom from somewhere other than LAN, but thats more trouble than it's worth so whatever.
 
 ## Other
